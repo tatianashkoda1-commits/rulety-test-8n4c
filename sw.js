@@ -1,5 +1,5 @@
 // Кеш «по мере чтения»: всё, что клиент открыл, доступно без интернета.
-const C = "mr-book-v1-2010";
+const C = "mr-book-v1-2010b";
 self.addEventListener("install", e => { self.skipWaiting(); e.waitUntil(caches.open(C).then(c => c.addAll(["./", "index.html", "img/cover.jpg", "img/logo.png"]))); });
 self.addEventListener("activate", e => e.waitUntil(self.clients.claim()));
 self.addEventListener("fetch", e => {
